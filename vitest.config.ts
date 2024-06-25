@@ -1,4 +1,4 @@
-import { resolve } from 'path';
+import { resolve } from 'node:path';
 import { defineConfig } from 'vitest/config';
 const dirname = resolve();
 export default defineConfig({
@@ -12,11 +12,11 @@ export default defineConfig({
   },
   test: {
     coverage: {
-      provider: 'c8',
+      provider: 'v8',
       exclude: ['playground/**/*'],
       reporter: ['text', 'json', 'html'],
     },
     globals: true,
-    watch: false
+    watch: false,
   },
 });
