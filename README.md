@@ -2,13 +2,11 @@
 
 [![NPM version](https://img.shields.io/npm/v/plugins-mdx?color=a1b858&label=)](https://www.npmjs.com/package/plugins-mdx)
 
-
 ### A mdx plugin collection for plugins
 
 ```warn
-
+仅支持vite
 ```
-`
 
 ## 安装
 
