@@ -40,7 +40,6 @@
     "build": "tsup",
     "lint": "eslint --cache --fix \"./src/*.{ts,tsx,js,vue}\"",
     "test": "vitest -r test",
-    "typecheck": "tsc  --noEmit",
     "coverage": "vitest run --coverage",
     "prepublishOnly": "pnpm run build",
     "release": "bumpp --commit --tag --push && pnpm publish --access public"
