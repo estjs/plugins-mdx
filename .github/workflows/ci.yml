@@ -51,7 +51,7 @@ jobs:
         run: npm i -g pnpm
 
       - name: Install
-        run: nci
+        run: pnpm i
 
 
   test:
