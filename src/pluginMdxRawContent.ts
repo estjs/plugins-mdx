@@ -1,5 +1,4 @@
 import fs from 'fs-extra';
-
 import { MD_REGEX, cleanUrl } from './utils';
 import type { Plugin } from 'vite';
 
