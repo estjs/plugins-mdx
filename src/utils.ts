@@ -1,4 +1,6 @@
 import process from 'node:process';
+import { createHash as createHashFunc } from 'node:crypto';
+
 export const isProduction = () => process.env.NODE_ENV === 'production';
 
 export const DIRECTIVE_TYPES: string[] = ['tip', 'warning', 'danger', 'info'];
@@ -19,6 +21,7 @@ export const LANGS = [
   'javascript',
   'vue',
   'typescript',
+  'html',
   'css',
   'sass',
   'less',
@@ -28,7 +31,9 @@ export const LANGS = [
   'yaml',
   'html',
   'json',
+  'jsonc',
   'markdown',
+  'mdx',
   'shell',
   'bash',
   'sql',
@@ -43,3 +48,34 @@ export const LANGS = [
   'swift',
   'rust',
 ];
+
+export const dynamicImport = new Function('modulePath', 'return import(modulePath)');
+
+export const createHash = (info: string): string => {
+  if (!info) {
+    throw new Error(`Invalid info: ${info}`);
+  }
+  return createHashFunc('sha256').update(info).digest('hex').slice(0, 8);
+};
+
+export const parseUrl = (
+  url: string,
+): {
+  url: string;
+  query: string;
+  hash: string;
+} => {
+  const [withoutHash, hash = ''] = url.split('#');
+  const [cleanedUrl, query = ''] = withoutHash.split('?');
+  return {
+    url: cleanedUrl,
+    query,
+    hash,
+  };
+};
+
+export const defaultConfig = {
+  essor: true,
+  root: '/',
+  base: '/',
+};

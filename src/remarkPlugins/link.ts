@@ -1,6 +1,7 @@
 import path from 'node:path';
 import { visit } from 'unist-util-visit';
-import { isProduction } from '../utils';
+
+import { isProduction, parseUrl } from '../utils';
 import type { Plugin } from 'unified';
 
 interface LinkNode {
@@ -39,6 +40,3 @@ export const remarkPluginNormalizeLink: Plugin<[{ base: string; enableSpa: boole
       },
     );
   };
-function parseUrl(url: string): { url: any; hash: any } {
-  throw new Error('Function not implemented.');
-}
