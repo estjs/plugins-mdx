@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: ['src/index.ts', 'src/pluginMdxRollup.ts'],
+  entry: ['src/index.ts'],
   outDir: 'dist',
   format: ['cjs', 'esm'],
   target: 'es2016',
