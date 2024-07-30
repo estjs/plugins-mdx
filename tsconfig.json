@@ -7,7 +7,6 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "types": ["vitest/globals"],
     "strict": true,
     "strictNullChecks": true,
     "esModuleInterop": true,
