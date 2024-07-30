@@ -5,16 +5,16 @@
 ### A mdx plugin collection for plugins
 
 ```warn
-仅支持vite
+just support vite
 ```
 
-## 安装
+## Install
 
 ```bash
 npm i -D plugins-mdx
 ```
 
-## 使用
+## Usage
 
 ```js
 import { defineConfig } from 'vite'
@@ -27,7 +27,7 @@ export default defineConfig({
 })
 ```
 
-## 选项
+## Options
 
 ```ts
 export interface options {
