@@ -78,6 +78,7 @@
     "bumpp": "^9.4.1",
     "lodash-es": "^4.17.21",
     "tsup": "^8.2.3",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "vite": "^5.3.5"
   }
 }
